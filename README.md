@@ -46,7 +46,7 @@ MIRADAL-API es responsable de:
   benrojasbarahona@gmail.com
 
 - Sebastián Domínguez  
-  sebastian.dominguez.traiguen2001@gmail.com
+  sebastian.dominguez@alumnos.uach.cl
 
 - Jared Montecinos  
   jaredmontecinos2005@gmail.com
