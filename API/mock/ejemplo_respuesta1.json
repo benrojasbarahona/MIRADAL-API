@@ -1,0 +1,17 @@
+{
+    "id-respuesta": "76VSD8SD8V798JHEWBJHKGV",
+    "respuestas": [
+      { "item": "conoce-nombre-humedal", "respuesta": "si" },
+      { "item": "nombre-humedal", "respuesta": "miraflores" },
+      { "item": "percibe-aves", "respuesta": "si" },
+      { "item": "percibe-peces", "respuesta": "no" },
+      { "item": "percibe-ganado", "respuesta": "no" },
+      { "item": "percibe-ranas", "respuesta": "si" },
+      { "item": "percibe-insectos", "respuesta": "no" },
+      { "item": "percibe-desechos", "respuesta": "no" },
+      { "item": "percibe-agua-turbia", "respuesta": "no" },
+      { "item": "huele", "respuesta": "2" },
+      { "item": "comentario", "respuesta": "" }
+    ]
+  }
+  
