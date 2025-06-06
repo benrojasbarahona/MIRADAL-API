@@ -4,8 +4,3 @@
         "item" : ["si","no","perro"]
     }
 }
-
-id:uuidv4(),
-    respuestas:{
-      item:["si","no","perro"]
-    }
