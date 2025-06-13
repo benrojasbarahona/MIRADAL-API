@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import { v4 as uuidv4 } from 'uuid';
-
+import {v4 as uuidv4} from 'uuid';
 let datos = [
   {
 	  idRespuesta : uuidv4(),
@@ -19,18 +18,8 @@ let datos = [
 }
 
 ]
-
 export async function GET() {
-  return NextResponse.json(datos);
+  return NextResponse.json( datos );
 }
 
-export async function POST() {
-  const nuevoUsuario = {
-    id: uuidv4(),
-    respuestas: {
-      item: ["no", "ne", "na"]
-    }
-  };
-  datos.push(nuevoUsuario);
-  return NextResponse.json(nuevoUsuario);
-}
+
