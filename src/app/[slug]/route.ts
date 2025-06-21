@@ -39,20 +39,7 @@ let datos = [
 }
 ]
 
-// Función CORS adaptada para NextResponse
-function applyCORSHeaders(response: NextResponse) {
-  response.headers.set("Access-Control-Allow-Credentials", "true");
-  response.headers.set("Access-Control-Allow-Origin", "*");
-  response.headers.set(
-    "Access-Control-Allow-Methods",
-    "GET,OPTIONS,PATCH,DELETE,POST,PUT"
-  );
-  response.headers.set(
-    "Access-Control-Allow-Headers",
-    "X-CSRF-Token, X-Requested-With, Accept, Content-Type, Authorization"
-  );
-  return response;
-}
+
 
 export async function GET(
   request: NextRequest,
