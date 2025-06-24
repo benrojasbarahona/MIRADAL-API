@@ -1,6 +1,7 @@
 import { timeStamp } from "console";
 import { NextRequest, NextResponse } from "next/server";
 import {v4 as uuidv4} from 'uuid';
+import { obtenerRespuestasDeEncuesta, obtenerTodasLasEncuestas } from "../../../lib/db/encuesta";
 
 
 // añadir un id ascendente para cada respuesta respondida
@@ -46,6 +47,8 @@ export async function GET(
   { params }: { params: Promise<{ slug: string }> },
 ) {
   const { slug } = await params;
-  if (slug==="obtenerRespuestas") return NextResponse.json(datos);
+  const data = await obtenerTodasLasEncuestas();
+  const items = data;
+  if (slug==="obtenerRespuestas") return NextResponse.json( await(items));
   else return NextResponse.json({ message: `False}!` });
 }
