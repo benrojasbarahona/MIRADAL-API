@@ -49,6 +49,6 @@ export async function GET(
   const { slug } = await params;
   const data = await obtenerTodasLasEncuestas();
   const items = data;
-  if (slug==="obtenerRespuestas") return NextResponse.json( await(items));
+  if (slug==="obtenerRespuestas") return NextResponse.json( await(data));
   else return NextResponse.json({ message: `False}!` });
 }
