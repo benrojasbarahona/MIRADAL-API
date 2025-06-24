@@ -39,8 +39,9 @@ export async function insertarEncuesta(data: EncuestaInput) {
 
 export async function obtenerTodasLasEncuestas() {
   const { data, error } = await supabase
-    .from('Encuestas')
+    .from("Encuestas")
     .select('*')
+    .order("created_at", { ascending: false });
   if (error) throw error;
   console.log(data);
   return data;

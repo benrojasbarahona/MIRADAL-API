@@ -47,8 +47,7 @@ export async function GET(
   { params }: { params: Promise<{ slug: string }> },
 ) {
   const { slug } = await params;
-  const data = await obtenerTodasLasEncuestas();
-  const items = data;
+  const data = obtenerTodasLasEncuestas();
   if (slug==="obtenerRespuestas") return NextResponse.json( await(data));
   else return NextResponse.json({ message: `False}!` });
 }
