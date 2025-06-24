@@ -1,4 +1,4 @@
-import { supabase } from "../supabaseClient";
+import { supabase } from "./supabaseClient";
 
 interface Respuesta {
   item: string;
@@ -10,7 +10,6 @@ export interface EncuestaInput {
   timestamp: string;
   respuestas: Respuesta[];
 }
-
 
 export async function insertarEncuesta(data: EncuestaInput) {
   const { id_respuesta, respuestas } = data;
@@ -40,7 +39,7 @@ export async function insertarEncuesta(data: EncuestaInput) {
 export async function obtenerTodasLasEncuestas() {
   const { data, error } = await supabase
     .from("Encuestas")
-    .select('*')
+    .select("*")
     .order("created_at", { ascending: false });
   if (error) throw error;
   console.log(data);
