@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
   }
 }
 
-{/*}
+
 export async function GET() {
   try {
     const encuestas = await obtenerTodasLasEncuestas();
@@ -20,5 +20,3 @@ export async function GET() {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
-
-*/}
