@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  async headers() {Add commentMore actions
+  async headers() {
     return [
       {
         source: "/obtenerRespuestas/:path*",
