@@ -10,13 +10,3 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
-
-
-export async function GET() {
-  try {
-    const encuestas = await obtenerTodasLasEncuestas();
-    return NextResponse.json(encuestas);
-  } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
-  }
-}
