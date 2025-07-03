@@ -27,7 +27,7 @@ export async function insertarEncuesta(data: EncuestaInput) {
   }));
 
   const { error: errorInsertRespuestas } = await supabase
-    .from("Respuestas")
+    .from("respuestas")
     .insert(respuestasToInsert);
 
   if (errorInsertRespuestas) throw errorInsertRespuestas;
@@ -40,18 +40,32 @@ export async function obtenerTodasLasEncuestas() {
   const { data, error } = await supabase
     .from("Encuestas")
     .select("*")
-    .order("created_at", { ascending: false });
+    .order("timestamp", { ascending: false });
+    console.log(error);
+
   if (error) throw error;
-  console.log(data);
+
   return data;
 }
 
 export async function obtenerRespuestasDeEncuesta(id_encuesta: string) {
   const { data, error } = await supabase
-    .from("Respuestas")
+    .from("respuestas")
     .select("item, respuesta")
     .eq("encuesta_id", id_encuesta);
   if (error) throw error;
   console.log(data);
+  return data;
+}
+
+export async function obtenerRespuestasYEncuestas() {
+  const { data, error } = await supabase
+    .from("Encuestas")
+    .select(`id,
+      timestamp,
+      respuestas(item,
+      respuesta)`);
+  
+  if (error) throw error;
   return data;
 }
